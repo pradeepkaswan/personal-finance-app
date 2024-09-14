@@ -87,7 +87,14 @@ const NAV_ITEMS = [
   },
 ];
 
-const NavItem = ({ icon, href, label, isMinimized }) => {
+interface NavItemProps {
+  icon: React.ReactNode;
+  href: string;
+  label: string;
+  isMinimized?: boolean;
+}
+
+const NavItem = ({ icon, href, label, isMinimized }: NavItemProps) => {
   const pathname = usePathname();
   const isActive = pathname === href;
 
@@ -95,10 +102,10 @@ const NavItem = ({ icon, href, label, isMinimized }) => {
     <li>
       <Link
         href={href}
-        className={`flex items-center gap-200 pl-400 h-[56px] group rounded-r-xl ${
+        className={`flex items-center gap-200  h-[56px] group rounded-r-xl ${
           isActive
-            ? "bg-beige-100 text-grey-900 pl-300 border-l-8 border-green"
-            : "textgrey-300 hover:text-grey-100"
+            ? "bg-beige-100 text-grey-900 border-l-4 pl-[28px] border-green"
+            : "textgrey-300 hover:text-grey-100 pl-400"
         } ${isMinimized ? "justify-center" : ""}`}
       >
         <div
