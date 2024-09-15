@@ -1,4 +1,4 @@
-import Sidebar from "@/components/sidebar";
+import AdaptiveNavigation from "@/components/adaptive-navigation";
 
 export default function MainLayout({
   children,
@@ -6,9 +6,9 @@ export default function MainLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
-      <Sidebar />
-      {children}
+    <div className="lg:flex">
+      <AdaptiveNavigation />
+      <main className="flex-1">{children}</main>
     </div>
   );
 }

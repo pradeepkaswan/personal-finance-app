@@ -25,3 +25,14 @@ export interface Pot {
   total: number;
   theme: string;
 }
+
+export type FormState =
+  | {
+      errors?: {
+        name?: string[];
+        email?: string[];
+        password?: string[];
+      };
+      message?: string;
+    }
+  | undefined;
