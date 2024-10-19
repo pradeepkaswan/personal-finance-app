@@ -38,7 +38,7 @@ const NAV_ITEMS = [
 export default function Layout() {
   const [isOpen, setIsOpen] = useState(true);
 
-  const toggleSidebar = () => setIsOpen(!isOpen);
+  // const toggleSidebar = () => setIsOpen(!isOpen);
 
   return (
     <div className="h-screen flex">

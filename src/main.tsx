@@ -12,6 +12,11 @@ import AuthLayout from "./components/layouts/auth-layout.tsx";
 import SignUp from "./pages/sign-up.tsx";
 import Login from "./pages/login.tsx";
 import ErrorPage from "./pages/error-page.tsx";
+import Overview from "./pages/overview.tsx";
+import Transactions from "./pages/transactions.tsx";
+import Budgets from "./pages/budgets.tsx";
+import Pots from "./pages/pots.tsx";
+import RecurringBills from "./pages/recurring-bills.tsx";
 
 const router = createBrowserRouter([
   {
@@ -42,23 +47,23 @@ const router = createBrowserRouter([
       { index: true, element: <Navigate to="/overview" replace /> },
       {
         path: "overview",
-        element: <div>Overview</div>,
+        element: <Overview />,
       },
       {
         path: "transactions",
-        element: <div>Transactions</div>,
+        element: <Transactions />,
       },
       {
         path: "budgets",
-        element: <div>Budgets</div>,
+        element: <Budgets />,
       },
       {
         path: "pots",
-        element: <div>Pots</div>,
+        element: <Pots />,
       },
       {
         path: "recurring-bills",
-        element: <div>Recurring Bills</div>,
+        element: <RecurringBills />,
       },
     ],
   },
