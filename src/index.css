@@ -6,8 +6,15 @@
   @font-face {
     font-family: "Public Sans";
     font-style: normal;
-    font-weight: 100 900;
+    font-weight: 400;
     font-display: swap;
-    src: url(/fonts/PublicSans-VariableFont_wght.ttf) format("truetype");
+    src: url(/fonts/static/PublicSans-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Public Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/static/PublicSans-Bold.ttf) format("truetype");
   }
 }

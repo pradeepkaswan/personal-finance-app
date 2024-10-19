@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Icons } from "../icons";
+import { Icons } from "../ui/icons";
 import { NavLink, Outlet } from "react-router-dom";
 
 const NAV_ITEMS = [

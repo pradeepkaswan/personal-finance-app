@@ -31,7 +31,11 @@ export default function AuthLayout() {
           </p>
         </div>
       </div>
-      <Outlet />
+      <div className="flex-grow flex items-center justify-center px-4">
+        <div className="w-full flex flex-col gap-6 bg-white max-w-[560px] py-6 px-5 rounded-xl">
+          <Outlet />
+        </div>
+      </div>
     </div>
   );
 }
