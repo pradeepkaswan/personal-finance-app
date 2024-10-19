@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Icons } from "../ui/icons";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
-const NAV_ITEMS = [
+const navItems = [
   {
     id: "overview",
     icon: <Icons.overview />,
@@ -37,7 +37,6 @@ const NAV_ITEMS = [
 
 export default function Layout() {
   const [isOpen, setIsOpen] = useState(true);
-  const location = useLocation();
 
   const toggleSidebar = () => setIsOpen(!isOpen);
 
@@ -48,23 +47,15 @@ export default function Layout() {
           isOpen ? "w-[300px]" : "w-[88px]"
         } bg-grey-900 py-[40px] flex flex-col rounded-r-2xl transition-all duration-300 ease-in-out text-grey-300 text-preset-3`}
       >
-        {isOpen ? (
-          <img
-            src="/images/logo-large.svg"
-            className="w-fit pl-8"
-            alt="Logo Large"
-          />
-        ) : (
-          <img
-            src="/images/logo-small.svg"
-            className="w-fit pl-9"
-            alt="Logo Small"
-          />
-        )}
+        <img
+          src={isOpen ? "/images/logo-large.svg" : "/images/logo-small.svg"}
+          className={isOpen ? "w-fit pl-8" : "w-fit pl-9"}
+          alt="Logo"
+        />
 
         <nav className="mt-10 ">
           <ul className="mt-6">
-            {NAV_ITEMS.map((item) => (
+            {navItems.map((item) => (
               <li key={item.id}>
                 <NavLink to={item.href}>
                   {({ isActive }) => (
@@ -114,16 +105,12 @@ export default function Layout() {
         </footer>
       </aside>
       <main className="flex-1 overflow-auto m-4 md:m-10">
-        <h1 className="text-preset-1 text-grey-900 py-2">
-          {location.pathname.slice(1).charAt(0).toUpperCase() +
-            location.pathname.slice(2)}
-        </h1>
         <Outlet />
       </main>
 
       <nav className="xl:hidden fixed bottom-0 left-0 right-0 bg-grey-900 text-grey-300 pt-2 px-4 rounded-t-xl">
         <ul className="flex flex-row">
-          {NAV_ITEMS.map((item) => (
+          {navItems.map((item) => (
             <li
               key={item.id}
               className="flex items-center justify-center w-full"
@@ -134,7 +121,7 @@ export default function Layout() {
                     className={`flex flex-col items-center gap-1 justify-center py-2 ${
                       isActive
                         ? "text-green bg-beige-100 rounded-t-lg border-b-4 border-green"
-                        : "hover:text-grey-100"
+                        : "hover:text-grey-100 pt-1"
                     }`}
                   >
                     {item.icon}

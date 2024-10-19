@@ -27,10 +27,15 @@ const Card = ({
 
 export default function Overview() {
   return (
-    <div className="mt-8 flex flex-col md:flex-row gap-3 md:gap-6">
-      <Card title="Current Balance" amount="4,836.00" isBalance={true} />
-      <Card title="Income" amount="3,814.25" isBalance={false} />
-      <Card title="Expense" amount="1,700.50" isBalance={false} />
-    </div>
+    <>
+      <h1 className="text-preset-1 text-grey-900 py-2">Overview</h1>
+      <div className="mt-8">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-6">
+          <Card title="Current Balance" amount="4,836.00" isBalance={true} />
+          <Card title="Income" amount="3,814.25" isBalance={false} />
+          <Card title="Expense" amount="1,700.50" isBalance={false} />
+        </div>
+      </div>
+    </>
   );
 }
