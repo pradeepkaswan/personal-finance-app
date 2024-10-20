@@ -1,8 +1,10 @@
+import PageTitle from "../components/page-title";
 import { Button } from "../components/ui/button";
 
 export default function Budgets() {
   return (
     <>
+      <PageTitle title="Frontend Mentor | Personal finance app - Budgets" />
       <div className="flex items-center justify-between">
         <h1 className="text-preset-1 text-grey-900 py-2">Budgets</h1>
         <Button weight="bold">+ Add New Budget</Button>

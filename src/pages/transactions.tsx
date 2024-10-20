@@ -1,9 +1,11 @@
+import PageTitle from "../components/page-title";
 import { Icons } from "../components/ui/icons";
 import { Input } from "../components/ui/input";
 
 export default function Transactions() {
   return (
     <>
+      <PageTitle title="Frontend Mentor | Personal finance app - Transactions" />
       <h1 className="text-preset-1 text-grey-900 py-2">Transactions</h1>
       <div className="mt-8">
         <div className="bg-white py-6 px-5 md:p-8 rounded-xl">

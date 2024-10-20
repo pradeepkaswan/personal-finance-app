@@ -1,3 +1,4 @@
+import PageTitle from "../components/page-title";
 import { PotCard } from "../components/sections/pot-card";
 import { Button } from "../components/ui/button";
 import { Pot } from "../types";
@@ -43,6 +44,7 @@ const pots: Pot[] = [
 export default function Pots() {
   return (
     <>
+      <PageTitle title="Frontend Mentor | Personal finance app - Pots" />
       <div className="flex items-center justify-between mb-8">
         <h1 className="text-preset-1 text-grey-900 py-2">Pots</h1>
         <Button weight="bold">+ Add New Pot</Button>

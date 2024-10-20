@@ -1,3 +1,5 @@
+import PageTitle from "../components/page-title";
+
 const Card = ({
   title,
   amount,
@@ -28,6 +30,7 @@ const Card = ({
 export default function Overview() {
   return (
     <>
+      <PageTitle title="Frontend Mentor | Personal finance app - Overview" />
       <h1 className="text-preset-1 text-grey-900 py-2">Overview</h1>
       <div className="mt-8">
         <div className="flex flex-col md:flex-row gap-3 md:gap-6">

@@ -1,9 +1,11 @@
+import PageTitle from "../components/page-title";
 import { Icons } from "../components/ui/icons";
 import { Input } from "../components/ui/input";
 
 export default function RecurringBills() {
   return (
     <>
+      <PageTitle title="Frontend Mentor | Personal finance app - Recurring Bills" />
       <h1 className="text-preset-1 text-grey-900 py-2">Recurring Bills</h1>
       <div className="mt-8">
         <div className="flex flex-col gap-6 xl:flex-row">
