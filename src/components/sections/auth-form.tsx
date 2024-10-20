@@ -76,6 +76,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({ isLogin, onSubmit }) => {
             name="email"
             value={formdata.email}
             onChange={handleChange}
+            autoComplete="email"
           />
         </div>
         <div className="flex w-full flex-col">
@@ -92,6 +93,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({ isLogin, onSubmit }) => {
               name="password"
               value={formdata.password}
               onChange={handleChange}
+              autoComplete="new-password"
             />
             <button
               type="button"

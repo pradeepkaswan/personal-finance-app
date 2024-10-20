@@ -17,6 +17,7 @@ import Transactions from "./pages/transactions.tsx";
 import Budgets from "./pages/budgets.tsx";
 import Pots from "./pages/pots.tsx";
 import RecurringBills from "./pages/recurring-bills.tsx";
+import { AuthProvider } from "./context/auth-context.tsx";
 
 const router = createBrowserRouter([
   {
@@ -71,6 +72,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>
 );

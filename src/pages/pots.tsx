@@ -42,18 +42,68 @@ const pots: Pot[] = [
 ];
 
 export default function Pots() {
+  //const [pots, setPots] = useState(mockPots);
+  // const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  // const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  // const [editingPot, setEditingPot] = useState<Pot | null>(null);
+
+  // const handleAddPot = (newPot: Partial<Pot>) => {
+  //   setPots([
+  //     ...pots,
+  //     { ...newPot, id: Date.now().toString(), total: 0 } as Pot,
+  //   ]);
+  //   setIsAddModalOpen(false);
+  // };
+
+  // const handleEditPot = (updatedPot: Partial<Pot>) => {
+  //   setPots(
+  //     pots.map((pot) =>
+  //       pot.id === updatedPot.id ? { ...pot, ...updatedPot } : pot
+  //     )
+  //   );
+  //   setIsEditModalOpen(false);
+  //   setEditingPot(null);
+  // };
+
+  // const handleDeletePot = (id: string) => {
+  //   setPots(pots.filter((pot) => pot.id !== id));
+  // };
+
   return (
     <>
       <PageTitle title="Frontend Mentor | Personal finance app - Pots" />
       <div className="flex items-center justify-between mb-8">
         <h1 className="text-preset-1 text-grey-900 py-2">Pots</h1>
-        <Button weight="bold">+ Add New Pot</Button>
+        <Button
+          weight="bold"
+          // onClick={() => setIsAddModalOpen(true)}
+        >
+          + Add New Pot
+        </Button>
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
         {pots.map((pot) => (
-          <PotCard key={pot.id} {...pot} />
+          <PotCard
+            key={pot.id}
+            // onEdit={() => {
+            //   setEditingPot(pot);
+            //   setIsEditModalOpen(true);
+            // }}
+            // onDelete={() => handleDeletePot(pot.id)}
+            {...pot}
+          />
         ))}
       </div>
+
+      {/* <dialog open={isAddModalOpen}>
+        <form onSubmit={handleAddPot}></form>
+      </dialog>
+
+      <dialog open={isEditModalOpen}>
+        {editingPot && (
+          <form onSubmit={handleEditPot} initialValue={editingPot}></form>
+        )}
+      </dialog> */}
     </>
   );
 }

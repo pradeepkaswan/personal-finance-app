@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
 import PageTitle from "../components/page-title";
+import { Button } from "../components/ui/button";
+import { useAuth } from "../context/auth-context";
 
 const Card = ({
   title,
@@ -28,11 +31,25 @@ const Card = ({
 );
 
 export default function Overview() {
+  const { logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/auth/login");
+  };
+
   return (
     <>
       <PageTitle title="Frontend Mentor | Personal finance app - Overview" />
-      <h1 className="text-preset-1 text-grey-900 py-2">Overview</h1>
-      <div className="mt-8">
+      <div className="flex items-center justify-between mb-8">
+        <h1 className="text-preset-1 text-grey-900 py-2">Overview</h1>
+        <Button intent="danger" weight="bold" onClick={handleLogout}>
+          Log Out
+        </Button>
+      </div>
+
+      <div>
         <div className="flex flex-col md:flex-row gap-3 md:gap-6">
           <Card title="Current Balance" amount="4,836.00" isBalance={true} />
           <Card title="Income" amount="3,814.25" isBalance={false} />
