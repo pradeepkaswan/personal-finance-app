@@ -2,7 +2,7 @@ import * as React from "react";
 import { cva } from "class-variance-authority";
 
 const inputStyles = cva(
-  "w-full block rounded-lg py-3 px-5 border-[1.5px] outline-none border-beige-500 placeholder:text-preset-4 placeholder:text-beige-500 hover:border-grey-500 active:border-grey-900 focus:border-grey-900",
+  "w-full block rounded-lg py-3 px-5 border-[1.25px] outline-none border-beige-500 placeholder:text-preset-4 placeholder:text-beige-500 hover:border-grey-500 active:border-grey-900 focus:border-grey-900",
   {
     variants: {},
     defaultVariants: {},

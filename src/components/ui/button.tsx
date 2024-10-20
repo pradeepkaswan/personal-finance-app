@@ -8,7 +8,7 @@ const buttonStyles = cva(
       intent: {
         primary: "bg-grey-900 text-white hover:bg-grey-500",
         secondary:
-          "bg-beige-100 text-grey-900 hover:bg-white hover:border hover:border-beige-500",
+          "bg-beige-100 text-grey-900 hover:bg-white hover:outline hover:outline-1 hover:outline-beige-500",
         tertiary: "",
         danger: "bg-red text-white hover:opacity-20",
       },

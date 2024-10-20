@@ -104,7 +104,7 @@ export default function Layout() {
           </button>
         </footer>
       </aside>
-      <main className="flex-1 overflow-auto m-4 md:m-10">
+      <main className="flex-1 overflow-auto mx-4 my-6 md:mx-10 md:my-8 md:m-10">
         <Outlet />
       </main>
 

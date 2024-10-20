@@ -23,7 +23,8 @@ export interface Pot {
   id: string;
   name: string;
   target: number;
-  current: number;
+  total: number;
+  theme: string;
 }
 
 export interface Bill {
